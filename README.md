@@ -52,7 +52,7 @@ python main.py
 - Lista de contatos
 - Dicionário para armazenar os dados
 
-### ⏳ Sprint 2 — Listagem de Contatos
+### ✅ Sprint 2 — Listagem de Contatos
 - Listar todos os contatos cadastrados
 - Introdução ao `for`
 
