@@ -59,7 +59,7 @@ python main.py
 ### ✅ Sprint 3 — Busca de Contatos
 - Buscar contato pelo nome
 
-### ⏳ Sprint 4 — Edição de Contatos
+### ✅ Sprint 4 — Edição de Contatos
 - Alterar telefone e e-mail
 
 ### ⏳ Sprint 5 — Exclusão de Contatos
