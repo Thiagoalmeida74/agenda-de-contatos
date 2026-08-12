@@ -56,7 +56,7 @@ python main.py
 - Listar todos os contatos cadastrados
 - Introdução ao `for`
 
-### ⏳ Sprint 3 — Busca de Contatos
+### ✅ Sprint 3 — Busca de Contatos
 - Buscar contato pelo nome
 
 ### ⏳ Sprint 4 — Edição de Contatos
