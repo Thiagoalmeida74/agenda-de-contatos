@@ -21,7 +21,14 @@ def adicionar_contato():
         "email": email
         }
     contatos.append(contato)
-    print("\n Contato adicionado com sucesso! 6\n")
+    print("\n Contato adicionado com sucesso! \n")
+    
+def listar_contatos():
+    for contato in contatos:
+        print(f"nome: {contato["nome"]}")
+        print(f"telefone: {contato["telefone"]}")
+        print(f"email: {contato["email"]}")
+        print()
 
 
 def main():
@@ -29,6 +36,10 @@ def main():
     while opcao != "6":
         if opcao == "1":
             adicionar_contato()
+        elif opcao == "2":
+            listar_contatos()
+              
+            
         opcao = mostrar_menu()
     print("até logo!")
         
