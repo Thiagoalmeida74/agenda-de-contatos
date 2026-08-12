@@ -26,7 +26,6 @@ def adicionar_contato():
 def listar_contatos():
     print("===Lista de contatos===")
     for contato in contatos:
-        print("===Lista de contatos===")
         print(f"nome: {contato["nome"]}")
         print(f"telefone: {contato["telefone"]}")
         print(f"e-mail: {contato["email"]}")
@@ -39,23 +38,53 @@ def buscar_contato():
 
         for contato in contatos:
             if contato ["nome"] == busca:
-                print (contato)
+                print(f"nome: {contato["nome"]}")
+                print(f"telefone: {contato["telefone"]}")
+                print(f"e-mail: {contato["email"]}")
                 encontrado = True
                 
         if encontrado == False:
             print("usuario não encontrado")
                 
+def editar_contato():
+    edita = input("qual nome deseja buscar? ")
+    encontrado = False
 
+    for contato in contatos:
+        if contato ["nome"] == edita:
+            
+            novo_telefone= input("qual será o novo numero de telefone? ")
+            contato["telefone"] = novo_telefone
+            print ("telefone alterado!")
+            
+            
+            novo_email= input("qual será o novo email? ")
+            contato["email"] = novo_email
+            print("email alterado!")
+            encontrado = True
+            
+    if encontrado == False:
+        print("usuario nao encontrado")
+
+            
+            
 
 def main():
     opcao = mostrar_menu()
     while opcao != "6":
         if opcao == "1":
             adicionar_contato()
+        
         elif opcao == "2":
             listar_contatos()
+       
         elif opcao == "3":
             buscar_contato()
+            
+        elif opcao == "4":
+            editar_contato()
+        
+        
             
               
             
