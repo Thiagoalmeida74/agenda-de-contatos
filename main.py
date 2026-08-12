@@ -66,8 +66,18 @@ def editar_contato():
     if encontrado == False:
         print("usuario nao encontrado")
 
-            
-            
+def excluir_contatos():
+    excluir = input("qual contato deseja excluir?")
+    encontrado = False
+
+    for contato  in contatos:
+        if contato ["nome"] == excluir:
+            contatos.remove(contato)
+            print("contato excluido")  
+            encontrado = True
+    if encontrado == False:
+        print("Usuario não encontrado")
+                               
 
 def main():
     opcao = mostrar_menu()
@@ -83,6 +93,16 @@ def main():
             
         elif opcao == "4":
             editar_contato()
+        
+        elif opcao == "5":
+            excluir_contatos()
+            
+        elif opcao == "6":
+            break
+            print("ate logo!")
+        
+        else:
+            print("opcao invalida")
         
         
             
