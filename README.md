@@ -62,7 +62,7 @@ python main.py
 ### ✅ Sprint 4 — Edição de Contatos
 - Alterar telefone e e-mail
 
-### ⏳ Sprint 5 — Exclusão de Contatos
+### ✅ Sprint 5 — Exclusão de Contatos
 - Remover contatos
 
 ### ⏳ Sprint 6 — Persistência de Dados
