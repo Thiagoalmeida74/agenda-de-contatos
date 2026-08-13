@@ -1,92 +1,247 @@
 # 📒 Agenda de Contatos em Python
 
-Projeto desenvolvido para praticar lógica de programação, estruturas de dados e boas práticas de desenvolvimento utilizando Python.
+Aplicação desenvolvida em Python para praticar lógica de programação, estruturas de dados, persistência de informações e organização de código.
 
-## 🚀 Funcionalidades
+O projeto consiste em uma agenda de contatos executada pelo terminal, permitindo cadastrar, listar, buscar, editar e excluir contatos. Os dados são armazenados em um arquivo JSON, permitindo que permaneçam salvos mesmo após o encerramento do programa.
+
+---
+
+<details open>
+<summary><strong>🎯 Descrição do Projeto</strong></summary>
+
+<br>
+
+A **Agenda de Contatos** foi desenvolvida como um projeto prático durante os estudos de Python e Desenvolvimento Backend.
+
+O objetivo é praticar conceitos fundamentais da linguagem através da construção de uma aplicação funcional utilizando operações de **CRUD**:
+
+- **Create** — Cadastrar contatos
+- **Read** — Listar e buscar contatos
+- **Update** — Editar informações
+- **Delete** — Excluir contatos
+
+Durante o desenvolvimento, o projeto também evoluiu para utilizar persistência de dados com JSON e organização do código em módulos separados.
+
+</details>
+
+---
+
+<details>
+<summary><strong>📋 Funcionalidades</strong></summary>
+
+<br>
 
 - ✅ Cadastro de contatos
-- ⏳ Listagem de contatos
-- ⏳ Busca de contatos
-- ⏳ Edição de contatos
-- ⏳ Exclusão de contatos
-- ⏳ Persistência em arquivo JSON
+- ✅ Listagem de contatos
+- ✅ Busca de contatos pelo nome
+- ✅ Edição de telefone e e-mail
+- ✅ Exclusão de contatos
+- ✅ Persistência dos dados em arquivo JSON
+- ✅ Carregamento automático dos contatos ao iniciar o programa
 
-## 🛠 Tecnologias utilizadas
+</details>
 
-- Python 3
-- Git
-- GitHub
+---
 
-## 📚 Conceitos praticados
+<details>
+<summary><strong>🗺️ Roadmap e Evolução do Projeto</strong></summary>
 
-- Funções
-- Estruturas condicionais (`if` / `elif`)
-- Estruturas de repetição (`while`)
-- Listas
-- Dicionários
-- Laço `for`
-- Manipulação de arquivos JSON
-
-## ▶️ Como executar
-
-```bash
-git clone https://github.com/Thiagoalmeida74/agenda-de-contatos.git
-
-cd agenda-de-contatos
-
-python main.py
-```
-
-## 🗺️ Roadmap do Projeto
+<br>
 
 ### ✅ Sprint 0 — Estrutura do Projeto
-- Criar repositório
-- Configurar Git
-- Criar README
-- Adicionar licença
+
+- Criação do repositório
+- Configuração do Git
+- Criação do README
+- Adição da licença
 - Estrutura inicial do projeto
 
 ### ✅ Sprint 1 — Cadastro de Contatos
-- Menu principal
+
+- Criação do menu principal
 - Cadastro de contatos
-- Lista de contatos
-- Dicionário para armazenar os dados
+- Utilização de dicionários para armazenar os dados
 
 ### ✅ Sprint 2 — Listagem de Contatos
-- Listar todos os contatos cadastrados
-- Introdução ao `for`
+
+- Listagem de todos os contatos cadastrados
+- Introdução ao laço `for`
 
 ### ✅ Sprint 3 — Busca de Contatos
-- Buscar contato pelo nome
+
+- Busca de contatos pelo nome
 
 ### ✅ Sprint 4 — Edição de Contatos
-- Alterar telefone e e-mail
+
+- Alteração do telefone
+- Alteração do e-mail
 
 ### ✅ Sprint 5 — Exclusão de Contatos
-- Remover contatos
+
+- Remoção de contatos cadastrados
 
 ### ✅ Sprint 6 — Persistência de Dados
-- Salvar contatos em arquivo JSON
-- Carregar contatos automaticamente ao iniciar o programa
 
-### ⏳ Sprint 7 — Refatoração
-- Separação em módulos
-- Melhorias de organização
-- Limpeza do código
+- Salvamento dos contatos em arquivo JSON
+- Carregamento automático dos contatos ao iniciar o programa
 
-## 🎯 Objetivos de Aprendizagem
+### ✅ Sprint 7 — Refatoração e Organização
 
-Durante o desenvolvimento deste projeto serão praticados:
+- Separação do código em módulos
+- Criação do arquivo `funcoes_contatos.py`
+- Criação do arquivo `persistencia.py`
+- Utilização de `import`
+- Utilização de parâmetros entre funções
+- Utilização de `return`
+- Separação de responsabilidades
+- Organização do `.gitignore`
+- Limpeza e comentários no código
 
-- Organização de código
-- Estruturas de dados
-- Manipulação de listas e dicionários
-- Estruturas de repetição
+</details>
+
+---
+
+<details>
+<summary><strong>🧠 Conceitos Praticados</strong></summary>
+
+<br>
+
+Durante o desenvolvimento deste projeto foram praticados conceitos como:
+
+- Funções
+- Parâmetros de funções
+- Retorno de valores com `return`
+- Estruturas condicionais (`if`, `elif` e `else`)
+- Estruturas de repetição (`while`)
+- Laço `for`
+- Listas
+- Dicionários
 - CRUD
-- Persistência de dados
+- Manipulação de arquivos
+- JSON
+- Módulos em Python
+- Importação de funções
+- Separação de responsabilidades
+- Organização de código
 - Versionamento com Git
-- Documentação de projetos
+- GitHub
+
+</details>
+
+---
+
+<details>
+<summary><strong>🛠️ Tecnologias Utilizadas</strong></summary>
+
+<br>
+
+- 🐍 Python 3
+- 📄 JSON
+- 🌳 Git
+- ☁️ GitHub
+
+</details>
+
+---
+
+<details>
+<summary><strong>🗂️ Estrutura do Projeto</strong></summary>
+
+<br>
+
+```text
+agenda-de-contatos/
+│
+├── funcoes_contatos.py
+├── persistencia.py
+├── main.py
+├── contatos.json
+├── .gitignore
+├── README.md
+└── LICENSE
+```
+
+### 📄 `main.py`
+
+Responsável por controlar o funcionamento principal do programa.
+
+- Carrega os contatos
+- Exibe o menu
+- Recebe as opções do usuário
+- Chama as funções responsáveis por cada operação
+
+### 📄 `funcoes_contatos.py`
+
+Contém as funções responsáveis pelo gerenciamento dos contatos.
+
+- Adicionar contato
+- Listar contatos
+- Buscar contato
+- Editar contato
+- Excluir contato
+
+### 📄 `persistencia.py`
+
+Responsável pela persistência dos dados.
+
+- Salva os contatos no arquivo JSON
+- Carrega os contatos ao iniciar o programa
+
+### 📄 `contatos.json`
+
+Arquivo utilizado para armazenar os contatos cadastrados.
+
+</details>
+
+---
+
+<details>
+<summary><strong>▶️ Como Executar</strong></summary>
+
+<br>
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/Thiagoalmeida74/agenda-de-contatos.git
+```
+
+Entre na pasta do projeto:
+
+```bash
+cd agenda-de-contatos
+```
+
+Execute o programa:
+
+```bash
+python main.py
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>🚀 Próximos Passos</strong></summary>
+
+<br>
+
+O projeto continuará sendo evoluído conforme o avanço nos estudos de Python e Desenvolvimento Backend.
+
+Possíveis melhorias futuras:
+
+- Validação dos dados cadastrados
+- Melhorias na busca de contatos
+- Tratamento de erros
+- Busca sem diferenciação entre maiúsculas e minúsculas
+- Melhor organização e evolução da estrutura do projeto
+- Interface gráfica ou API no futuro
+
+</details>
+
+---
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **Thiago Almeida** durante sua jornada de estudos em Desenvolvimento Backend com Python.
+Desenvolvido por **Thiago Almeida** durante sua jornada de estudos em **Desenvolvimento Backend com Python**.
