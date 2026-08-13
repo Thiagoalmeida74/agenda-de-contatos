@@ -1,26 +1,15 @@
 # 📒 Agenda de Contatos em Python
 
-Aplicação desenvolvida em Python para praticar lógica de programação, estruturas de dados, persistência de informações e organização de código.
-
-O projeto consiste em uma agenda de contatos executada pelo terminal, permitindo cadastrar, listar, buscar, editar e excluir contatos. Os dados são armazenados em um arquivo JSON, permitindo que permaneçam salvos mesmo após o encerramento do programa.
-
----
-
 <details open>
 <summary><strong>🎯 Descrição do Projeto</strong></summary>
 
 <br>
 
-A **Agenda de Contatos** foi desenvolvida como um projeto prático durante os estudos de Python e Desenvolvimento Backend.
+A **Agenda de Contatos** é uma aplicação desenvolvida em Python para gerenciar contatos diretamente pelo terminal.
 
-O objetivo é praticar conceitos fundamentais da linguagem através da construção de uma aplicação funcional utilizando operações de **CRUD**:
+O projeto permite realizar operações de **CRUD**, possibilitando cadastrar, listar, buscar, editar e excluir contatos. As informações são armazenadas em um arquivo **JSON**, permitindo que os dados permaneçam salvos mesmo após o encerramento do programa.
 
-- **Create** — Cadastrar contatos
-- **Read** — Listar e buscar contatos
-- **Update** — Editar informações
-- **Delete** — Excluir contatos
-
-Durante o desenvolvimento, o projeto também evoluiu para utilizar persistência de dados com JSON e organização do código em módulos separados.
+Além das funcionalidades principais, o projeto foi estruturado em módulos separados para praticar conceitos importantes de organização de código, separação de responsabilidades e comunicação entre arquivos utilizando `import`.
 
 </details>
 
