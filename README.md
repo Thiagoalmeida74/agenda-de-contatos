@@ -65,7 +65,7 @@ python main.py
 ### ✅ Sprint 5 — Exclusão de Contatos
 - Remover contatos
 
-### ⏳ Sprint 6 — Persistência de Dados
+### ✅ Sprint 6 — Persistência de Dados
 - Salvar contatos em arquivo JSON
 - Carregar contatos automaticamente ao iniciar o programa
 
