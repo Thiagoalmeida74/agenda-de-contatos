@@ -1,3 +1,4 @@
+import json
 contatos = []
 
 def mostrar_menu():
@@ -11,6 +12,16 @@ def mostrar_menu():
     opcao= input("escolha uma opcao: ")
     return opcao
 
+def salvar_contato():
+    with open("contatos.json", "w") as arquivo:
+        json.dump(contatos,arquivo)
+
+def carregar_contatos():
+    global contatos
+    
+    with open("contatos.json", "r") as arquivo:
+        contatos = json.load(arquivo)
+        
 def adicionar_contato():
     nome = input("Qual é seu nome?: ")
     telefone =input("qual é seu telefone?: ")
@@ -21,8 +32,10 @@ def adicionar_contato():
         "email": email
         }
     contatos.append(contato)
+    salvar_contato()
     print("\n Contato adicionado com sucesso! \n")
     
+
 def listar_contatos():
     print("===Lista de contatos===")
     for contato in contatos:
@@ -60,6 +73,7 @@ def editar_contato():
             
             novo_email= input("qual será o novo email? ")
             contato["email"] = novo_email
+            salvar_contato()
             print("email alterado!")
             encontrado = True
             
@@ -73,6 +87,7 @@ def excluir_contatos():
     for contato  in contatos:
         if contato ["nome"] == excluir:
             contatos.remove(contato)
+            salvar_contato()
             print("contato excluido")  
             encontrado = True
     if encontrado == False:
@@ -80,6 +95,7 @@ def excluir_contatos():
                                
 
 def main():
+    carregar_contatos()
     opcao = mostrar_menu()
     while opcao != "6":
         if opcao == "1":
