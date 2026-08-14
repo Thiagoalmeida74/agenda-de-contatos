@@ -7,7 +7,14 @@ def salvar_contato(contatos):
         
 def carregar_contatos():
      # Carrega os contatos salvos quando o programa inicia
-    with open("contatos.json", "r") as arquivo:
-        contatos = json.load(arquivo)
+    try:
+        with open("contatos.json", "r") as arquivo:
+            contatos = json.load(arquivo)
             
         return contatos
+    
+    except FileNotFoundError:
+        return []
+
+    except json.JSONDecodeError:
+        return []

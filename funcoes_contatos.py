@@ -1,9 +1,10 @@
 from persistencia import salvar_contato
+from validacao import validar_campo,validar_telefone,validar_email
 
 def adicionar_contatos(contatos):
-    nome = input("Qual é seu nome?: ")
-    telefone =input("qual é seu telefone?: ")
-    email =input("qual é seu email?: ")
+    nome = validar_campo("Qual é seu nome?: ").title()
+    telefone =validar_telefone("qual é seu telefone?: ")
+    email =validar_email("qual é seu email?: ")
     contato= {
         "nome":nome,
         "telefone": telefone,
@@ -24,7 +25,7 @@ def listar_contatos(contatos):
         
         
 def buscar_contatos(contatos):
-        busca = input("qual nome deseja buscar?")
+        busca = validar_campo("qual nome deseja buscar?").title()
         
          # Controla se algum contato foi encontrado na busca
         encontrado = False
@@ -36,35 +37,35 @@ def buscar_contatos(contatos):
                 print(f"e-mail: {contato["email"]}")
                 encontrado = True
                 
-        if encontrado == False:
+        if not encontrado:
             print("usuario não encontrado")
  
                 
 def editar_contatos(contatos):
-    edita = input("qual nome deseja buscar? ")
+    edita = validar_campo("qual nome deseja buscar? ").title()
     encontrado = False
 
 # Procura o contato pelo nome para alterar os dados
     for contato in contatos:
         if contato ["nome"] == edita:
             
-            novo_telefone= input("qual será o novo numero de telefone? ")
+            novo_telefone= validar_telefone("qual será o novo numero de telefone? ")
             contato["telefone"] = novo_telefone
             print ("telefone alterado!")
             
             
-            novo_email= input("qual será o novo email? ")
+            novo_email= validar_email("qual será o novo email? ")
             contato["email"] = novo_email
             salvar_contato(contatos)
             print("email alterado!")
             encontrado = True
             
-    if encontrado == False:
+    if not encontrado:
         print("usuario nao encontrado")
         
         
 def excluir_contatos(contatos):
-    excluir = input("qual contato deseja excluir?")
+    excluir = validar_campo("qual contato deseja excluir?").title()
     encontrado = False
 
     for contato  in contatos:
@@ -73,6 +74,6 @@ def excluir_contatos(contatos):
             salvar_contato(contatos)
             print("contato excluido")  
             encontrado = True
-    if encontrado == False:
+    if not encontrado:
         print("Usuario não encontrado")
                                

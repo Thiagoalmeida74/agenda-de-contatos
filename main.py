@@ -1,6 +1,7 @@
 import json 
 from funcoes_contatos import adicionar_contatos, listar_contatos, buscar_contatos, editar_contatos,excluir_contatos 
 from persistencia import carregar_contatos
+from validacao import validar_opcao
 
 def mostrar_menu():
     print ("=== Agenda de contatos ===")
@@ -10,7 +11,7 @@ def mostrar_menu():
     print ("4 - Editar contato")
     print ("5 - Excluir contato")
     print ("6 - Sair")
-    opcao= input("escolha uma opcao: ")
+    opcao = validar_opcao("escolha uma opcao: ")
     return opcao
 
 def main():# controla o menu e chama as funções
@@ -34,10 +35,6 @@ def main():# controla o menu e chama as funções
             
         elif opcao == "6":
             break
-            print("ate logo!")
-        
-        else:
-            print("opcao invalida")
           
         opcao = mostrar_menu()
     print("até logo!")
