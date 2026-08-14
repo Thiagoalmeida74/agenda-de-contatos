@@ -9,7 +9,7 @@ A **Agenda de Contatos** é uma aplicação desenvolvida em Python para gerencia
 
 O projeto permite realizar operações de **CRUD**, possibilitando cadastrar, listar, buscar, editar e excluir contatos. As informações são armazenadas em um arquivo **JSON**, permitindo que os dados permaneçam salvos mesmo após o encerramento do programa.
 
-Além das funcionalidades principais, o projeto foi estruturado em módulos separados para praticar conceitos importantes de organização de código, separação de responsabilidades e comunicação entre arquivos utilizando `import`.
+Durante o desenvolvimento, o projeto foi estruturado em módulos separados para praticar conceitos importantes de organização de código, separação de responsabilidades, validação de dados, tratamento de erros e comunicação entre arquivos utilizando `import`.
 
 </details>
 
@@ -27,13 +27,20 @@ Além das funcionalidades principais, o projeto foi estruturado em módulos sepa
 - ✅ Exclusão de contatos
 - ✅ Persistência dos dados em arquivo JSON
 - ✅ Carregamento automático dos contatos ao iniciar o programa
+- ✅ Validação de campos obrigatórios
+- ✅ Validação de telefone
+- ✅ Validação básica de e-mail
+- ✅ Validação das opções do menu
+- ✅ Padronização de nomes
+- ✅ Padronização de e-mails
+- ✅ Tratamento de erros ao carregar os dados
 
 </details>
 
 ---
 
 <details>
-<summary><strong>🗺️ Roadmap e Evolução do Projeto</strong></summary>
+<summary><strong>🗺️ Evolução do Projeto</strong></summary>
 
 <br>
 
@@ -54,20 +61,23 @@ Além das funcionalidades principais, o projeto foi estruturado em módulos sepa
 ### ✅ Sprint 2 — Listagem de Contatos
 
 - Listagem de todos os contatos cadastrados
-- Introdução ao laço `for`
+- Utilização do laço `for`
 
 ### ✅ Sprint 3 — Busca de Contatos
 
 - Busca de contatos pelo nome
+- Verificação de contatos encontrados
 
 ### ✅ Sprint 4 — Edição de Contatos
 
 - Alteração do telefone
 - Alteração do e-mail
+- Salvamento das alterações
 
 ### ✅ Sprint 5 — Exclusão de Contatos
 
 - Remoção de contatos cadastrados
+- Atualização dos dados após a exclusão
 
 ### ✅ Sprint 6 — Persistência de Dados
 
@@ -84,7 +94,23 @@ Além das funcionalidades principais, o projeto foi estruturado em módulos sepa
 - Utilização de `return`
 - Separação de responsabilidades
 - Organização do `.gitignore`
-- Limpeza e comentários no código
+- Limpeza e organização do código
+
+### ✅ Sprint 8 — Validações e Tratamento de Erros
+
+- Criação do arquivo `validacao.py`
+- Validação de campos obrigatórios
+- Padronização de nomes com `.title()`
+- Validação de telefone utilizando `.isdigit()`
+- Validação básica de e-mail
+- Padronização de e-mails com `.lower()`
+- Validação das opções do menu
+- Reutilização das validações nas operações do sistema
+- Tratamento de `FileNotFoundError`
+- Tratamento de `json.JSONDecodeError`
+- Melhorias na legibilidade e organização do código
+
+🏁 **Projeto concluído após a Sprint 8.**
 
 </details>
 
@@ -111,6 +137,15 @@ Durante o desenvolvimento deste projeto foram praticados conceitos como:
 - Módulos em Python
 - Importação de funções
 - Separação de responsabilidades
+- Validação de dados
+- `.strip()`
+- `.title()`
+- `.lower()`
+- `.isdigit()`
+- Tratamento de exceções
+- `try` e `except`
+- `FileNotFoundError`
+- `JSONDecodeError`
 - Organização de código
 - Versionamento com Git
 - GitHub
@@ -141,9 +176,10 @@ Durante o desenvolvimento deste projeto foram praticados conceitos como:
 ```text
 agenda-de-contatos/
 │
-├── funcoes_contatos.py
-├── persistencia.py
 ├── main.py
+├── funcoes_contatos.py
+├── validacao.py
+├── persistencia.py
 ├── contatos.json
 ├── .gitignore
 ├── README.md
@@ -152,12 +188,12 @@ agenda-de-contatos/
 
 ### 📄 `main.py`
 
-Responsável por controlar o funcionamento principal do programa.
+Responsável pelo funcionamento principal do programa.
 
 - Carrega os contatos
 - Exibe o menu
 - Recebe as opções do usuário
-- Chama as funções responsáveis por cada operação
+- Direciona cada opção para sua respectiva funcionalidade
 
 ### 📄 `funcoes_contatos.py`
 
@@ -169,12 +205,22 @@ Contém as funções responsáveis pelo gerenciamento dos contatos.
 - Editar contato
 - Excluir contato
 
+### 📄 `validacao.py`
+
+Responsável pelas validações dos dados informados pelo usuário.
+
+- Validação de campos vazios
+- Validação de telefone
+- Validação básica de e-mail
+- Validação das opções do menu
+
 ### 📄 `persistencia.py`
 
 Responsável pela persistência dos dados.
 
 - Salva os contatos no arquivo JSON
 - Carrega os contatos ao iniciar o programa
+- Trata erros relacionados ao arquivo e ao JSON
 
 ### 📄 `contatos.json`
 
@@ -211,23 +257,13 @@ python main.py
 
 ---
 
-<details>
-<summary><strong>🚀 Próximos Passos</strong></summary>
+## 🏁 Status do Projeto
 
-<br>
+**Projeto concluído.**
 
-O projeto continuará sendo evoluído conforme o avanço nos estudos de Python e Desenvolvimento Backend.
+A Agenda de Contatos foi desenvolvida como parte dos estudos em Python e teve como objetivo praticar fundamentos da programação, CRUD, persistência de dados, organização de código, validações e tratamento de erros.
 
-Possíveis melhorias futuras:
-
-- Validação dos dados cadastrados
-- Melhorias na busca de contatos
-- Tratamento de erros
-- Busca sem diferenciação entre maiúsculas e minúsculas
-- Melhor organização e evolução da estrutura do projeto
-- Interface gráfica ou API no futuro
-
-</details>
+O próximo passo da jornada será um novo projeto com desafios e conceitos mais avançados.
 
 ---
 
